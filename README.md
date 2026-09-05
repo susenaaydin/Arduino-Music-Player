@@ -1,54 +1,80 @@
-# Arduino-Music-Player
-Arduino-based music player with LCD lyrics display, buzzer audio output, and note-based LED indicators.
 # Arduino Music Player
 
-An Arduino-based music player that combines melody playback, an LCD lyrics display, and LED indicators for musical notes.
+Arduino kullanılarak geliştirilmiş bir müzik oynatıcı projesidir. Proje; buzzer üzerinden melodi çalarken, 16x2 LCD ekranda şarkı sözlerini gösterir ve çalınan notalara göre LED'leri kontrol eder.
 
-## Features
+## Özellikler
 
-* Plays predefined melodies using a buzzer
-* Displays lyrics on a 16x2 LCD
-* Lights up LEDs according to the played musical notes
-* Supports different musical notes and octaves
-* Controls note duration and tempo
-* Displays the song title when the program starts
+* 🎵 Buzzer kullanarak önceden tanımlanmış melodileri çalma
+* 🎶 Farklı nota ve oktavları destekleme
+* 📺 16x2 LCD ekranda şarkı sözlerini gösterme
+* 💡 Çalınan notalara göre LED'leri kontrol etme
+* ⏱️ Nota sürelerini ve tempoyu ayarlama
+* 🎼 BPM değerine göre ritim kontrolü
+* 📝 Program başladığında şarkı adını gösterme
 
-## Hardware
+## Kullanılan Donanımlar
 
 * Arduino
-* 16x2 LCD
+* 16x2 LCD ekran
 * Buzzer
-* 7 LEDs
-* Jumper wires
+* 7 adet LED
 * Breadboard
+* Jumper kablolar
 
-## Pin Configuration
+## Pin Bağlantıları
 
-| Component | Pin |
-| --------- | --- |
-| LCD RS    | 12  |
-| LCD E     | 11  |
-| LCD D4    | A0  |
-| LCD D5    | A1  |
-| LCD D6    | A2  |
-| LCD D7    | A3  |
-| Note LEDs | 2–8 |
-| Buzzer    | 9   |
+| Bileşen       | Arduino Pini |
+| ------------- | -----------: |
+| LCD RS        |           12 |
+| LCD E         |           11 |
+| LCD D4        |           A0 |
+| LCD D5        |           A1 |
+| LCD D6        |           A2 |
+| LCD D7        |           A3 |
+| Nota LED'leri |          2–8 |
+| Buzzer        |            9 |
 
-## How It Works
+## Nasıl Çalışır?
 
-The program defines the frequencies of musical notes and uses the Arduino `tone()` function to generate the corresponding sounds.
+Program içerisinde müzik notalarının frekansları tanımlanmıştır. Arduino'nun `tone()` fonksiyonu kullanılarak bu frekanslara karşılık gelen sesler buzzer üzerinden oluşturulur.
 
-When a note is played, the LED associated with that note is activated. At the same time, the lyrics are displayed on the LCD according to the current part of the melody.
+Bir nota çalındığında, o notaya karşılık gelen LED aktif hale gelir. Aynı anda LCD ekran üzerinde melodinin ilgili bölümüne ait şarkı sözleri gösterilir.
 
-The playback tempo is calculated using BPM, and different note durations are used to control the rhythm.
+Melodinin temposu BPM değeri kullanılarak belirlenir. Farklı nota süreleri sayesinde melodinin ritmi ve çalma hızı kontrol edilir.
 
-## Technologies
+## Kullanılan Teknolojiler
 
-* Arduino
-* C/C++
-* Arduino LiquidCrystal Library
+* **Arduino**
+* **C/C++**
+* **Arduino LiquidCrystal Kütüphanesi**
 
-## Project Status
+## Projenin Amacı
 
-Completed
+Bu proje ile Arduino kullanarak ses, görüntü ve LED kontrolünün birlikte kullanılabileceği bir uygulama geliştirilmesi amaçlanmıştır.
+
+Proje kapsamında;
+
+* Arduino ile buzzer üzerinden ses üretme,
+* LCD ekran kullanımı,
+* LED kontrolü,
+* Müzik notalarının frekanslarını kullanma,
+* Nota sürelerini ve tempo değerlerini yönetme
+
+konularında uygulama yapılmıştır.
+
+## Proje Durumu
+
+**Tamamlandı.**
+
+## Geliştirilebilecek Özellikler
+
+* Birden fazla şarkı ekleme
+* Butonlarla şarkı seçme
+* Ses seviyesini kontrol etme
+* Daha fazla nota için LED ekleme
+* Menü sistemi oluşturma
+* Kullanıcının kendi melodisini oluşturabilmesi
+
+## Geliştirici
+
+**Sude Sena Aydın**
