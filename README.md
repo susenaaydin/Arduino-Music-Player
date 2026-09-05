@@ -1,80 +1,79 @@
 # Arduino Music Player
 
-Arduino kullanılarak geliştirilmiş bir müzik oynatıcı projesidir. Proje; buzzer üzerinden melodi çalarken, 16x2 LCD ekranda şarkı sözlerini gösterir ve çalınan notalara göre LED'leri kontrol eder.
+An Arduino-based music player project that plays melodies through a buzzer, displays lyrics on a 16x2 LCD screen, and controls LEDs according to the notes being played.
 
-## Özellikler
+## Features
 
-* 🎵 Buzzer kullanarak önceden tanımlanmış melodileri çalma
-* 🎶 Farklı nota ve oktavları destekleme
-* 📺 16x2 LCD ekranda şarkı sözlerini gösterme
-* 💡 Çalınan notalara göre LED'leri kontrol etme
-* ⏱️ Nota sürelerini ve tempoyu ayarlama
-* 🎼 BPM değerine göre ritim kontrolü
-* 📝 Program başladığında şarkı adını gösterme
+* 🎵 Plays predefined melodies using a buzzer
+* 🎶 Supports different musical notes and octaves
+* 📺 Displays lyrics on a 16x2 LCD screen
+* 💡 Controls LEDs according to the notes being played
+* ⏱️ Controls note durations and tempo
+* 🎼 Controls rhythm based on BPM values
+* 📝 Displays the song title when the program starts
 
-## Kullanılan Donanımlar
+## Hardware
 
 * Arduino
-* 16x2 LCD ekran
+* 16x2 LCD display
 * Buzzer
-* 7 adet LED
+* 7 LEDs
 * Breadboard
-* Jumper kablolar
+* Jumper wires
 
-## Pin Bağlantıları
+## Pin Configuration
 
-| Bileşen       | Arduino Pini |
-| ------------- | -----------: |
-| LCD RS        |           12 |
-| LCD E         |           11 |
-| LCD D4        |           A0 |
-| LCD D5        |           A1 |
-| LCD D6        |           A2 |
-| LCD D7        |           A3 |
-| Nota LED'leri |          2–8 |
-| Buzzer        |            9 |
+| Component | Arduino Pin |
+| --------- | ----------: |
+| LCD RS    |          12 |
+| LCD E     |          11 |
+| LCD D4    |          A0 |
+| LCD D5    |          A1 |
+| LCD D6    |          A2 |
+| LCD D7    |          A3 |
+| Note LEDs |         2–8 |
+| Buzzer    |           9 |
 
-## Nasıl Çalışır?
+## How It Works
 
-Program içerisinde müzik notalarının frekansları tanımlanmıştır. Arduino'nun `tone()` fonksiyonu kullanılarak bu frekanslara karşılık gelen sesler buzzer üzerinden oluşturulur.
+The program defines the frequencies of different musical notes. Arduino's `tone()` function is then used to generate the corresponding sounds through the buzzer.
 
-Bir nota çalındığında, o notaya karşılık gelen LED aktif hale gelir. Aynı anda LCD ekran üzerinde melodinin ilgili bölümüne ait şarkı sözleri gösterilir.
+When a note is played, the LED corresponding to that note is activated. At the same time, the relevant lyrics from the melody are displayed on the LCD screen.
 
-Melodinin temposu BPM değeri kullanılarak belirlenir. Farklı nota süreleri sayesinde melodinin ritmi ve çalma hızı kontrol edilir.
+The melody tempo is determined using the BPM value. Different note durations are used to control the rhythm and playback speed.
 
-## Kullanılan Teknolojiler
+## Technologies
 
 * **Arduino**
 * **C/C++**
-* **Arduino LiquidCrystal Kütüphanesi**
+* **Arduino LiquidCrystal Library**
 
-## Projenin Amacı
+## Project Purpose
 
-Bu proje ile Arduino kullanarak ses, görüntü ve LED kontrolünün birlikte kullanılabileceği bir uygulama geliştirilmesi amaçlanmıştır.
+The purpose of this project is to develop an Arduino application that combines sound generation, LCD display output, and LED control.
 
-Proje kapsamında;
+The project provides practical experience with:
 
-* Arduino ile buzzer üzerinden ses üretme,
-* LCD ekran kullanımı,
-* LED kontrolü,
-* Müzik notalarının frekanslarını kullanma,
-* Nota sürelerini ve tempo değerlerini yönetme
+* Generating sound using a buzzer
+* Working with an LCD display
+* Controlling LEDs
+* Using musical note frequencies
+* Managing note durations and tempo
+* Integrating multiple hardware components
 
-konularında uygulama yapılmıştır.
+## Project Status
 
-## Proje Durumu
+**Completed**
 
-**Tamamlandı.**
+## Future Improvements
 
-## Geliştirilebilecek Özellikler
+* Adding multiple songs
+* Selecting songs using buttons
+* Volume control
+* Adding more LEDs for additional notes
+* Creating a menu system
+* Allowing users to create custom melodies
 
-* Birden fazla şarkı ekleme
-* Butonlarla şarkı seçme
-* Ses seviyesini kontrol etme
-* Daha fazla nota için LED ekleme
-* Menü sistemi oluşturma
-* Kullanıcının kendi melodisini oluşturabilmesi
-
-## Geliştirici
+## Author
 
 **Sude Sena Aydın**
